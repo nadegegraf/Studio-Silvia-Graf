@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Silvia Graf</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffafc;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    header {
+      background-color: #eab2d3;
+      padding: 20px;
+      color: white;
+    }
+
+    .presentation img {
+      width: 200px;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .info {
+      margin: 20px;
+      font-size: 18px;
+    }
+
+    .whatsapp a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .whatsapp img {
+      width: 24px;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 600px;
+      margin: 30px auto;
+    }
+
+    .slides {
+      display: none;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .fade {
+      animation: fade 2s ease-in-out infinite;
+    }
+
+    @keyframes fade {
+      0% {opacity: 0;}
+      50% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Studio Silvia Graf</h1>
+  </header>
+
+  <div class="presentation">
+    <img src="https://i.imgur.com/dkVazS8.jpg" alt="Silvia Graf" />
+    <p>Silvia Graf<br><strong>Especialista desde 2021</strong></p>
+  </div>
+
+  <div class="info">
+    <p><strong>Endereço:</strong> Rua Laissez Puya Peixoto, 218 – Pq Fazendinha, Campinas/SP</p>
+    <p>Silvia possui curso de <strong>Saúde Ocular</strong>, essencial para atuar com responsabilidade na extensão de cílios.</p>
+    
+    <div class="whatsapp">
+      <a href="https://wa.me/c/5519991382859" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        Agende seu procedimento aqui
+      </a>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="slides fade">
+      <img src="https://images.unsplash.com/photo-1617692855027-4c88f076bb3b?auto=format&fit=crop&w=800&q=80" alt="Extensão de cílios 1" />
+    </div>
+    <div class="slides fade">
+      <img src="https://images.unsplash.com/photo-1608219959301-e8e00b19f1ba?auto=format&fit=crop&w=800&q=80" alt="Extensão de cílios 2" />
+    </div>
+    <div class="slides fade">
+      <img src="https://images.unsplash.com/photo-1636042278557-9be365e9d140?auto=format&fit=crop&w=800&q=80" alt="Cílios profissional" />
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("slides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+</body>
+</html>
